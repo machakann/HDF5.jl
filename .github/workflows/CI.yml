@@ -1,9 +1,8 @@
 name: CI
 
 on:
-  push:
-    tags: '*'
-  pull_request:
+  - push
+  - pull_request
 
 jobs:
   HDF5-system-libs:
