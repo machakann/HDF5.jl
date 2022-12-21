@@ -25,7 +25,7 @@ using Test
     @test d[end, :] == [1.1231, 1.313, 5.123, 2.231, 4.1231]
     @test d[:, :] == [1.1231 1.313 5.123 2.231 4.1231]
 
-    @static if VERSION >= v"1.4"
+    if VERSION >= v"1.4"
         @test d[1, begin] ≈ 1.1231
         @test d[:, begin] ≈ [1.1231]
         @test d[begin, :] == [1.1231, 1.313, 5.123, 2.231, 4.1231]
